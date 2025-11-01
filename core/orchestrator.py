@@ -53,7 +53,7 @@ class RecipeOrchestrator:
             if should_skip_api():
                 print("⚡ Fast mode: Using local recipe database")
                 from providers.fallback_recipes import search_fallback_recipes
-                return search_fallback_recipes(ingredients, max_results)
+                return search_fallback_recipes(ingredients, max_results, diet, max_minutes, sort_by)
         except ImportError:
             pass  # Config not available, proceed normally
         
@@ -74,7 +74,7 @@ class RecipeOrchestrator:
         # If no results, try fallback recipes
         if not recipes:
             from providers.fallback_recipes import search_fallback_recipes
-            recipes = search_fallback_recipes(ingredients, max_results)
+            recipes = search_fallback_recipes(ingredients, max_results, diet, max_minutes, sort_by)
             # Note: Fallback recipes are already pre-filtered and sorted
             return recipes
         

@@ -3095,6 +3095,208 @@ FALLBACK_RECIPES = [
         "servings": 8,
         "instructions": "Moroccan sweet and savory chicken pie."
     },
+    
+    # Gluten-Free Recipes
+    {
+        "id": "fallback_301",
+        "title": "Grilled Lemon Herb Chicken",
+        "cuisine": "Mediterranean",
+        "category": ["Chicken", "Gluten-free", "Grilled"],
+        "ingredients": ["chicken breast", "lemon", "olive oil", "garlic", "rosemary", "thyme"],
+        "time": 30,
+        "servings": 4,
+        "instructions": "Marinated grilled chicken with herbs."
+    },
+    {
+        "id": "fallback_302",
+        "title": "Quinoa Buddha Bowl",
+        "cuisine": "Modern",
+        "category": ["Vegetarian", "Gluten-free", "Healthy"],
+        "ingredients": ["quinoa", "chickpeas", "avocado", "kale", "tahini", "lemon"],
+        "time": 25,
+        "servings": 4,
+        "instructions": "Nutritious quinoa bowl with vegetables."
+    },
+    {
+        "id": "fallback_303",
+        "title": "Baked Salmon with Asparagus",
+        "cuisine": "American",
+        "category": ["Seafood", "Gluten-free", "Healthy"],
+        "ingredients": ["salmon fillet", "asparagus", "lemon", "garlic", "olive oil", "dill"],
+        "time": 25,
+        "servings": 4,
+        "instructions": "Simple baked salmon and asparagus."
+    },
+    {
+        "id": "fallback_304",
+        "title": "Mexican Chicken Fajita Bowl",
+        "cuisine": "Mexican",
+        "category": ["Chicken", "Gluten-free", "Rice bowl"],
+        "ingredients": ["chicken", "bell peppers", "onion", "rice", "lime", "cilantro", "spices"],
+        "time": 30,
+        "servings": 4,
+        "instructions": "Fajita-style chicken over rice."
+    },
+    {
+        "id": "fallback_305",
+        "title": "Cauliflower Rice Stir Fry",
+        "cuisine": "Asian",
+        "category": ["Vegetarian", "Gluten-free", "Low-carb"],
+        "ingredients": ["cauliflower", "eggs", "carrots", "peas", "soy sauce", "sesame oil"],
+        "time": 20,
+        "servings": 4,
+        "instructions": "Healthy cauliflower rice stir-fry."
+    },
+    {
+        "id": "fallback_306",
+        "title": "Greek Chicken Souvlaki",
+        "cuisine": "Greek",
+        "category": ["Chicken", "Gluten-free", "Grilled"],
+        "ingredients": ["chicken", "lemon", "olive oil", "oregano", "garlic", "onion"],
+        "time": 35,
+        "servings": 4,
+        "instructions": "Marinated Greek chicken skewers."
+    },
+    {
+        "id": "fallback_307",
+        "title": "Thai Coconut Curry Soup",
+        "cuisine": "Thai",
+        "category": ["Soup", "Gluten-free", "Chicken"],
+        "ingredients": ["chicken", "coconut milk", "curry paste", "lemongrass", "lime", "vegetables"],
+        "time": 30,
+        "servings": 6,
+        "instructions": "Creamy Thai coconut curry soup."
+    },
+    {
+        "id": "fallback_308",
+        "title": "Zucchini Noodles with Pesto",
+        "cuisine": "Italian",
+        "category": ["Vegetarian", "Gluten-free", "Low-carb"],
+        "ingredients": ["zucchini", "basil", "pine nuts", "parmesan", "garlic", "olive oil"],
+        "time": 15,
+        "servings": 4,
+        "instructions": "Fresh zucchini noodles with basil pesto."
+    },
+    {
+        "id": "fallback_309",
+        "title": "Shrimp Avocado Salad",
+        "cuisine": "American",
+        "category": ["Seafood", "Gluten-free", "Salad"],
+        "ingredients": ["shrimp", "avocado", "lettuce", "tomato", "lime", "cilantro"],
+        "time": 15,
+        "servings": 4,
+        "instructions": "Fresh shrimp and avocado salad."
+    },
+    {
+        "id": "fallback_310",
+        "title": "Stuffed Bell Peppers with Ground Beef",
+        "cuisine": "American",
+        "category": ["Beef", "Gluten-free", "Baked"],
+        "ingredients": ["bell peppers", "ground beef", "rice", "tomato sauce", "onion", "cheese"],
+        "time": 50,
+        "servings": 4,
+        "instructions": "Baked peppers stuffed with beef and rice."
+    },
+    {
+        "id": "fallback_311",
+        "title": "Vietnamese Pho (Rice Noodle Soup)",
+        "cuisine": "Vietnamese",
+        "category": ["Soup", "Gluten-free", "Beef"],
+        "ingredients": ["rice noodles", "beef", "beef broth", "ginger", "star anise", "onion", "herbs"],
+        "time": 90,
+        "servings": 6,
+        "instructions": "Traditional Vietnamese beef noodle soup."
+    },
+    {
+        "id": "fallback_312",
+        "title": "Sweet Potato Buddha Bowl",
+        "cuisine": "Modern",
+        "category": ["Vegetarian", "Gluten-free", "Healthy"],
+        "ingredients": ["sweet potato", "chickpeas", "spinach", "tahini", "quinoa", "avocado"],
+        "time": 35,
+        "servings": 4,
+        "instructions": "Roasted sweet potato and chickpea bowl."
+    },
+    {
+        "id": "fallback_313",
+        "title": "Lemon Garlic Shrimp with Rice",
+        "cuisine": "Mediterranean",
+        "category": ["Seafood", "Gluten-free", "Quick"],
+        "ingredients": ["shrimp", "rice", "lemon", "garlic", "butter", "parsley"],
+        "time": 20,
+        "servings": 4,
+        "instructions": "Quick garlic shrimp over rice."
+    },
+    {
+        "id": "fallback_314",
+        "title": "Mexican Street Corn Salad",
+        "cuisine": "Mexican",
+        "category": ["Vegetarian", "Gluten-free", "Salad"],
+        "ingredients": ["corn", "lime", "cotija cheese", "cilantro", "mayo", "chili powder"],
+        "time": 15,
+        "servings": 6,
+        "instructions": "Mexican-style corn salad."
+    },
+    {
+        "id": "fallback_315",
+        "title": "Teriyaki Chicken with Vegetables",
+        "cuisine": "Japanese",
+        "category": ["Chicken", "Gluten-free", "Stir-fry"],
+        "ingredients": ["chicken", "broccoli", "carrots", "gluten-free soy sauce", "honey", "ginger"],
+        "time": 25,
+        "servings": 4,
+        "instructions": "Sweet and savory teriyaki chicken."
+    },
+    {
+        "id": "fallback_316",
+        "title": "Indian Chicken Curry",
+        "cuisine": "Indian",
+        "category": ["Chicken", "Gluten-free", "Curry"],
+        "ingredients": ["chicken", "coconut milk", "curry powder", "tomato", "onion", "garlic", "ginger"],
+        "time": 40,
+        "servings": 4,
+        "instructions": "Rich Indian chicken curry."
+    },
+    {
+        "id": "fallback_317",
+        "title": "Caprese Salad",
+        "cuisine": "Italian",
+        "category": ["Vegetarian", "Gluten-free", "Salad"],
+        "ingredients": ["tomato", "mozzarella", "basil", "olive oil", "balsamic vinegar"],
+        "time": 10,
+        "servings": 4,
+        "instructions": "Classic Italian tomato mozzarella salad."
+    },
+    {
+        "id": "fallback_318",
+        "title": "Grilled Steak with Chimichurri",
+        "cuisine": "Argentinian",
+        "category": ["Beef", "Gluten-free", "Grilled"],
+        "ingredients": ["steak", "parsley", "garlic", "olive oil", "vinegar", "oregano"],
+        "time": 25,
+        "servings": 4,
+        "instructions": "Grilled steak with chimichurri sauce."
+    },
+    {
+        "id": "fallback_319",
+        "title": "Egg Fried Rice",
+        "cuisine": "Chinese",
+        "category": ["Vegetarian", "Gluten-free", "Rice"],
+        "ingredients": ["rice", "eggs", "peas", "carrots", "soy sauce", "sesame oil"],
+        "time": 15,
+        "servings": 4,
+        "instructions": "Simple egg fried rice."
+    },
+    {
+        "id": "fallback_320",
+        "title": "Greek Lemon Chicken Soup",
+        "cuisine": "Greek",
+        "category": ["Soup", "Gluten-free", "Chicken"],
+        "ingredients": ["chicken", "rice", "lemon", "eggs", "chicken broth", "dill"],
+        "time": 45,
+        "servings": 6,
+        "instructions": "Traditional Greek avgolemono soup."
+    },
 ]
 
 
@@ -3121,7 +3323,7 @@ def _build_ingredient_index():
     return _ingredient_index
 
 
-def search_fallback_recipes(user_ingredients: List[str], max_results: int = 10) -> List[Recipe]:
+def search_fallback_recipes(user_ingredients: List[str], max_results: int = 10, diet: str = None, max_minutes: int = None, sort_by: str = "relevance") -> List[Recipe]:
     """
     Search fallback recipes based on user ingredients.
     Returns recipes that match at least one ingredient.
@@ -3130,6 +3332,9 @@ def search_fallback_recipes(user_ingredients: List[str], max_results: int = 10) 
     Args:
         user_ingredients: List of ingredients user has
         max_results: Maximum results to return
+        diet: Dietary filter (vegetarian, vegan, etc.)
+        max_minutes: Maximum cooking time in minutes
+        sort_by: Sort method (relevance, match-desc, used-desc, missing-asc, time-asc)
     
     Returns:
         List of matching recipes
@@ -3186,13 +3391,34 @@ def search_fallback_recipes(user_ingredients: List[str], max_results: int = 10) 
         
         results.append(recipe)
     
-    # Smart sort: match % → used count → cooking time
-    def smart_sort_key(recipe: Recipe):
-        match_pct = recipe.match_percentage
-        used_count = len(recipe.used_ingredients)
-        time = recipe.ready_in_minutes if recipe.ready_in_minutes is not None else 999999
-        return (-match_pct, -used_count, time)
+    # Apply diet filter
+    if diet:
+        diet_lower = diet.lower()
+        filtered_results = []
+        for recipe in results:
+            categories = [c.lower() for c in recipe.category_or_diet] if recipe.category_or_diet else []
+            if diet_lower in categories:
+                filtered_results.append(recipe)
+        results = filtered_results
     
-    results.sort(key=smart_sort_key)
+    # Apply max time filter
+    if max_minutes is not None:
+        results = [r for r in results if r.ready_in_minutes and r.ready_in_minutes <= max_minutes]
+    
+    # Sort based on sort_by parameter
+    if sort_by == "relevance" or sort_by == "match-desc":
+        # Smart sort: match % → used count → cooking time
+        def smart_sort_key(recipe: Recipe):
+            match_pct = recipe.match_percentage
+            used_count = len(recipe.used_ingredients)
+            time = recipe.ready_in_minutes if recipe.ready_in_minutes is not None else 999999
+            return (-match_pct, -used_count, time)
+        results.sort(key=smart_sort_key)
+    elif sort_by == "used-desc":
+        results.sort(key=lambda r: (-len(r.used_ingredients), -r.match_percentage))
+    elif sort_by == "missing-asc":
+        results.sort(key=lambda r: (len(r.missing_ingredients), -r.match_percentage))
+    elif sort_by == "time-asc":
+        results.sort(key=lambda r: (r.ready_in_minutes if r.ready_in_minutes is not None else 999999, -r.match_percentage))
     
     return results[:max_results]

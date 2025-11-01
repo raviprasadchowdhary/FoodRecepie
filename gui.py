@@ -361,10 +361,10 @@ class ModernRecipeFinderGUI:
         tk.Label(inner, text="Provider:", font=('Segoe UI', 8), 
                 fg=self.COLORS['text_secondary'], bg=self.COLORS['bg_hover']).pack(side=tk.LEFT, padx=(0, 4))
         
-        self.provider_var = tk.StringVar(value="fast")
+        self.provider_var = tk.StringVar(value="themealdb")
         ttk.Combobox(inner, textvariable=self.provider_var,
-                    values=["fast", "tasty", "edamam"], state="readonly",
-                    width=10, font=('Segoe UI', 8)).pack(side=tk.LEFT, padx=(0, 15))
+                    values=["themealdb", "spoonacular", "edamam"], state="readonly",
+                    width=12, font=('Segoe UI', 8)).pack(side=tk.LEFT, padx=(0, 15))
         
         tk.Label(inner, text="Results:", font=('Segoe UI', 8),
                 fg=self.COLORS['text_secondary'], bg=self.COLORS['bg_hover']).pack(side=tk.LEFT, padx=(0, 4))
@@ -391,10 +391,10 @@ class ModernRecipeFinderGUI:
         tk.Label(inner, text="Sort:", font=('Segoe UI', 8),
                 fg=self.COLORS['text_secondary'], bg=self.COLORS['bg_hover']).pack(side=tk.LEFT, padx=(0, 4))
         
-        self.sort_var = tk.StringVar(value="match")
+        self.sort_var = tk.StringVar(value="relevance")
         ttk.Combobox(inner, textvariable=self.sort_var,
-                    values=["match", "time-asc", "time-desc"],
-                    state="readonly", width=10, font=('Segoe UI', 8)).pack(side=tk.LEFT)
+                    values=["relevance", "match-desc", "used-desc", "missing-asc", "time-asc"],
+                    state="readonly", width=12, font=('Segoe UI', 8)).pack(side=tk.LEFT)
     
     def create_modern_results_section(self, parent):
         """Create MAXIMIZED results section"""
