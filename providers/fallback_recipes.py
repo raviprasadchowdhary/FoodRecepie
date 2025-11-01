@@ -3297,6 +3297,722 @@ FALLBACK_RECIPES = [
         "servings": 6,
         "instructions": "Traditional Greek avgolemono soup."
     },
+    
+    # Additional Vegan Recipes (to reach 50)
+    {
+        "id": "fallback_321",
+        "title": "Vegan Lentil Soup",
+        "cuisine": "Mediterranean",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "Soup"],
+        "ingredients": ["lentils", "carrot", "celery", "onion", "tomato", "vegetable broth", "spices"],
+        "time": 40,
+        "servings": 6,
+        "instructions": "Hearty vegan lentil soup."
+    },
+    {
+        "id": "fallback_322",
+        "title": "Vegan Buddha Bowl",
+        "cuisine": "Modern",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "Healthy"],
+        "ingredients": ["quinoa", "chickpeas", "kale", "sweet potato", "tahini", "lemon"],
+        "time": 35,
+        "servings": 4,
+        "instructions": "Nutritious vegan buddha bowl."
+    },
+    {
+        "id": "fallback_323",
+        "title": "Vegan Chickpea Curry",
+        "cuisine": "Indian",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "Curry"],
+        "ingredients": ["chickpeas", "coconut milk", "tomato", "onion", "curry spices", "garlic", "ginger"],
+        "time": 30,
+        "servings": 4,
+        "instructions": "Creamy vegan chickpea curry."
+    },
+    {
+        "id": "fallback_324",
+        "title": "Vegan Stir-Fry Tofu",
+        "cuisine": "Asian",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "Stir-fry"],
+        "ingredients": ["tofu", "broccoli", "bell pepper", "soy sauce", "ginger", "garlic"],
+        "time": 20,
+        "servings": 4,
+        "instructions": "Quick vegan tofu stir-fry."
+    },
+    {
+        "id": "fallback_325",
+        "title": "Vegan Black Bean Tacos",
+        "cuisine": "Mexican",
+        "category": ["Vegan", "Vegetarian", "Gluten-free"],
+        "ingredients": ["black beans", "corn tortillas", "avocado", "tomato", "cilantro", "lime"],
+        "time": 15,
+        "servings": 4,
+        "instructions": "Simple vegan black bean tacos."
+    },
+    {
+        "id": "fallback_326",
+        "title": "Vegan Mushroom Risotto",
+        "cuisine": "Italian",
+        "category": ["Vegan", "Vegetarian", "Gluten-free"],
+        "ingredients": ["arborio rice", "mushrooms", "vegetable broth", "onion", "garlic", "nutritional yeast"],
+        "time": 35,
+        "servings": 4,
+        "instructions": "Creamy vegan mushroom risotto."
+    },
+    {
+        "id": "fallback_327",
+        "title": "Vegan Pad Thai",
+        "cuisine": "Thai",
+        "category": ["Vegan", "Vegetarian", "Gluten-free"],
+        "ingredients": ["rice noodles", "tofu", "bean sprouts", "peanuts", "lime", "tamarind", "garlic"],
+        "time": 25,
+        "servings": 4,
+        "instructions": "Classic vegan pad thai."
+    },
+    {
+        "id": "fallback_328",
+        "title": "Vegan Chili",
+        "cuisine": "American",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "One-pot"],
+        "ingredients": ["beans", "tomato", "bell pepper", "onion", "chili powder", "cumin", "corn"],
+        "time": 45,
+        "servings": 6,
+        "instructions": "Hearty vegan three-bean chili."
+    },
+    {
+        "id": "fallback_329",
+        "title": "Vegan Veggie Burger Bowl",
+        "cuisine": "American",
+        "category": ["Vegan", "Vegetarian", "Gluten-free"],
+        "ingredients": ["black beans", "quinoa", "lettuce", "tomato", "avocado", "tahini"],
+        "time": 25,
+        "servings": 4,
+        "instructions": "Deconstructed veggie burger bowl."
+    },
+    {
+        "id": "fallback_330",
+        "title": "Vegan Cauliflower Tikka Masala",
+        "cuisine": "Indian",
+        "category": ["Vegan", "Vegetarian", "Gluten-free"],
+        "ingredients": ["cauliflower", "coconut milk", "tomato", "onion", "tikka spices", "ginger", "garlic"],
+        "time": 35,
+        "servings": 4,
+        "instructions": "Vegan cauliflower tikka masala."
+    },
+    {
+        "id": "fallback_331",
+        "title": "Vegan Minestrone Soup",
+        "cuisine": "Italian",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "Soup"],
+        "ingredients": ["beans", "tomato", "zucchini", "carrot", "celery", "vegetable broth", "herbs"],
+        "time": 40,
+        "servings": 6,
+        "instructions": "Classic vegan minestrone soup."
+    },
+    {
+        "id": "fallback_332",
+        "title": "Vegan Sweet Potato Curry",
+        "cuisine": "Thai",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "Curry"],
+        "ingredients": ["sweet potato", "coconut milk", "curry paste", "spinach", "lime", "peanuts"],
+        "time": 30,
+        "servings": 4,
+        "instructions": "Thai vegan sweet potato curry."
+    },
+    {
+        "id": "fallback_333",
+        "title": "Vegan Ramen Bowl",
+        "cuisine": "Japanese",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "Soup"],
+        "ingredients": ["rice noodles", "tofu", "mushrooms", "bok choy", "miso", "ginger", "scallions"],
+        "time": 25,
+        "servings": 4,
+        "instructions": "Vegan ramen with miso broth."
+    },
+    {
+        "id": "fallback_334",
+        "title": "Vegan Falafel Bowl",
+        "cuisine": "Middle Eastern",
+        "category": ["Vegan", "Vegetarian", "Gluten-free"],
+        "ingredients": ["chickpeas", "quinoa", "cucumber", "tomato", "tahini", "lemon", "herbs"],
+        "time": 30,
+        "servings": 4,
+        "instructions": "Vegan falafel bowl with tahini."
+    },
+    {
+        "id": "fallback_335",
+        "title": "Vegan Peanut Noodles",
+        "cuisine": "Asian",
+        "category": ["Vegan", "Vegetarian", "Gluten-free"],
+        "ingredients": ["rice noodles", "peanut butter", "soy sauce", "lime", "vegetables", "garlic", "ginger"],
+        "time": 20,
+        "servings": 4,
+        "instructions": "Creamy vegan peanut noodles."
+    },
+    {
+        "id": "fallback_336",
+        "title": "Vegan Stuffed Peppers",
+        "cuisine": "Mediterranean",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "Baked"],
+        "ingredients": ["bell peppers", "quinoa", "black beans", "corn", "tomato", "spices"],
+        "time": 45,
+        "servings": 4,
+        "instructions": "Vegan quinoa stuffed peppers."
+    },
+    {
+        "id": "fallback_336",
+        "title": "Vegan Mushroom Stroganoff",
+        "cuisine": "Russian",
+        "category": ["Vegan", "Vegetarian", "Gluten-free"],
+        "ingredients": ["mushrooms", "cashew cream", "onion", "garlic", "vegetable broth", "herbs"],
+        "time": 30,
+        "servings": 4,
+        "instructions": "Creamy vegan mushroom stroganoff."
+    },
+    {
+        "id": "fallback_337",
+        "title": "Vegan Tempeh Stir Fry",
+        "cuisine": "Asian",
+        "category": ["Vegan", "Vegetarian", "Gluten-free"],
+        "ingredients": ["tempeh", "vegetables", "soy sauce", "ginger", "garlic", "sesame oil"],
+        "time": 20,
+        "servings": 4,
+        "instructions": "Quick vegan tempeh stir fry."
+    },
+    {
+        "id": "fallback_338",
+        "title": "Vegan Quinoa Chili",
+        "cuisine": "American",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "One-pot"],
+        "ingredients": ["quinoa", "beans", "tomato", "bell pepper", "onion", "chili spices", "corn"],
+        "time": 35,
+        "servings": 6,
+        "instructions": "Protein-rich vegan quinoa chili."
+    },
+    {
+        "id": "fallback_339",
+        "title": "Vegan Coconut Rice",
+        "cuisine": "Asian",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "Side dish"],
+        "ingredients": ["rice", "coconut milk", "lime", "cilantro", "salt"],
+        "time": 20,
+        "servings": 4,
+        "instructions": "Fragrant vegan coconut rice."
+    },
+    {
+        "id": "fallback_340",
+        "title": "Vegan Veggie Sushi Bowl",
+        "cuisine": "Japanese",
+        "category": ["Vegan", "Vegetarian", "Gluten-free"],
+        "ingredients": ["sushi rice", "avocado", "cucumber", "carrot", "edamame", "nori", "soy sauce"],
+        "time": 25,
+        "servings": 4,
+        "instructions": "Deconstructed vegan sushi bowl."
+    },
+    {
+        "id": "fallback_341",
+        "title": "Vegan Lentil Bolognese",
+        "cuisine": "Italian",
+        "category": ["Vegan", "Vegetarian", "Gluten-free"],
+        "ingredients": ["lentils", "tomato", "carrot", "celery", "onion", "garlic", "herbs"],
+        "time": 40,
+        "servings": 4,
+        "instructions": "Hearty vegan lentil bolognese."
+    },
+    {
+        "id": "fallback_342",
+        "title": "Vegan Thai Green Curry",
+        "cuisine": "Thai",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "Curry"],
+        "ingredients": ["tofu", "coconut milk", "green curry paste", "vegetables", "basil", "lime"],
+        "time": 25,
+        "servings": 4,
+        "instructions": "Aromatic vegan green curry."
+    },
+    {
+        "id": "fallback_343",
+        "title": "Vegan Black Bean Soup",
+        "cuisine": "Latin American",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "Soup"],
+        "ingredients": ["black beans", "tomato", "onion", "cumin", "vegetable broth", "lime"],
+        "time": 35,
+        "servings": 6,
+        "instructions": "Hearty vegan black bean soup."
+    },
+    {
+        "id": "fallback_344",
+        "title": "Vegan Fried Rice",
+        "cuisine": "Chinese",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "Rice"],
+        "ingredients": ["rice", "vegetables", "tofu", "soy sauce", "sesame oil", "garlic"],
+        "time": 15,
+        "servings": 4,
+        "instructions": "Quick vegan fried rice."
+    },
+    {
+        "id": "fallback_345",
+        "title": "Vegan Gazpacho",
+        "cuisine": "Spanish",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "Soup"],
+        "ingredients": ["tomato", "cucumber", "bell pepper", "onion", "garlic", "olive oil", "vinegar"],
+        "time": 15,
+        "servings": 4,
+        "instructions": "Chilled vegan Spanish soup."
+    },
+    {
+        "id": "fallback_346",
+        "title": "Vegan Stuffed Mushrooms",
+        "cuisine": "Italian",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "Appetizer"],
+        "ingredients": ["mushrooms", "quinoa", "spinach", "garlic", "nutritional yeast", "herbs"],
+        "time": 30,
+        "servings": 4,
+        "instructions": "Vegan quinoa stuffed mushrooms."
+    },
+    {
+        "id": "fallback_347",
+        "title": "Vegan Butternut Squash Soup",
+        "cuisine": "American",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "Soup"],
+        "ingredients": ["butternut squash", "coconut milk", "onion", "garlic", "vegetable broth", "spices"],
+        "time": 40,
+        "servings": 6,
+        "instructions": "Creamy vegan butternut squash soup."
+    },
+    {
+        "id": "fallback_348",
+        "title": "Vegan Veggie Spring Rolls",
+        "cuisine": "Vietnamese",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "Appetizer"],
+        "ingredients": ["rice paper", "vegetables", "rice noodles", "tofu", "peanut sauce", "herbs"],
+        "time": 25,
+        "servings": 4,
+        "instructions": "Fresh vegan spring rolls."
+    },
+    {
+        "id": "fallback_349",
+        "title": "Vegan Eggplant Curry",
+        "cuisine": "Indian",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "Curry"],
+        "ingredients": ["eggplant", "tomato", "coconut milk", "onion", "curry spices", "garlic"],
+        "time": 35,
+        "servings": 4,
+        "instructions": "Vegan eggplant curry."
+    },
+    {
+        "id": "fallback_350",
+        "title": "Vegan Tomato Basil Soup",
+        "cuisine": "Italian",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "Soup"],
+        "ingredients": ["tomato", "basil", "onion", "garlic", "vegetable broth", "coconut cream"],
+        "time": 30,
+        "servings": 4,
+        "instructions": "Classic vegan tomato basil soup."
+    },
+    {
+        "id": "fallback_351",
+        "title": "Vegan Moroccan Tagine",
+        "cuisine": "Moroccan",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "Stew"],
+        "ingredients": ["chickpeas", "vegetables", "dried fruits", "spices", "vegetable broth"],
+        "time": 45,
+        "servings": 6,
+        "instructions": "Aromatic vegan Moroccan tagine."
+    },
+    {
+        "id": "fallback_352",
+        "title": "Vegan Pesto Zoodles",
+        "cuisine": "Italian",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "Low-carb"],
+        "ingredients": ["zucchini", "basil", "pine nuts", "garlic", "nutritional yeast", "olive oil"],
+        "time": 15,
+        "servings": 4,
+        "instructions": "Vegan pesto zucchini noodles."
+    },
+    {
+        "id": "fallback_353",
+        "title": "Vegan Cauliflower Rice Bowl",
+        "cuisine": "Asian",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "Low-carb"],
+        "ingredients": ["cauliflower", "vegetables", "tofu", "soy sauce", "sesame oil"],
+        "time": 20,
+        "servings": 4,
+        "instructions": "Low-carb vegan cauliflower rice bowl."
+    },
+    {
+        "id": "fallback_354",
+        "title": "Vegan Split Pea Soup",
+        "cuisine": "American",
+        "category": ["Vegan", "Vegetarian", "Gluten-free", "Soup"],
+        "ingredients": ["split peas", "carrot", "celery", "onion", "vegetable broth", "herbs"],
+        "time": 50,
+        "servings": 6,
+        "instructions": "Hearty vegan split pea soup."
+    },
+    {
+        "id": "fallback_355",
+        "title": "Vegan Enchilada Bowl",
+        "cuisine": "Mexican",
+        "category": ["Vegan", "Vegetarian", "Gluten-free"],
+        "ingredients": ["black beans", "rice", "corn", "enchilada sauce", "avocado", "cilantro"],
+        "time": 25,
+        "servings": 4,
+        "instructions": "Vegan enchilada rice bowl."
+    },
+    
+    # Additional Gluten-Free Recipes (to reach 50)
+    {
+        "id": "fallback_356",
+        "title": "Grilled Chicken Caesar Salad",
+        "cuisine": "American",
+        "category": ["Chicken", "Gluten-free", "Salad"],
+        "ingredients": ["chicken breast", "romaine lettuce", "parmesan", "gluten-free caesar dressing", "lemon"],
+        "time": 20,
+        "servings": 4,
+        "instructions": "Classic chicken caesar salad."
+    },
+    {
+        "id": "fallback_357",
+        "title": "Honey Glazed Salmon",
+        "cuisine": "American",
+        "category": ["Seafood", "Gluten-free", "Quick"],
+        "ingredients": ["salmon", "honey", "soy sauce", "garlic", "ginger", "lime"],
+        "time": 20,
+        "servings": 4,
+        "instructions": "Sweet and savory glazed salmon."
+    },
+    {
+        "id": "fallback_358",
+        "title": "Chicken and Vegetable Skewers",
+        "cuisine": "Mediterranean",
+        "category": ["Chicken", "Gluten-free", "Grilled"],
+        "ingredients": ["chicken", "bell peppers", "zucchini", "onion", "olive oil", "herbs"],
+        "time": 30,
+        "servings": 4,
+        "instructions": "Colorful chicken vegetable skewers."
+    },
+    {
+        "id": "fallback_359",
+        "title": "Thai Basil Chicken",
+        "cuisine": "Thai",
+        "category": ["Chicken", "Gluten-free", "Spicy"],
+        "ingredients": ["chicken", "basil", "chili", "garlic", "fish sauce", "bell pepper"],
+        "time": 20,
+        "servings": 4,
+        "instructions": "Spicy Thai basil chicken."
+    },
+    {
+        "id": "fallback_360",
+        "title": "Beef and Broccoli",
+        "cuisine": "Chinese",
+        "category": ["Beef", "Gluten-free", "Stir-fry"],
+        "ingredients": ["beef", "broccoli", "gluten-free soy sauce", "garlic", "ginger", "cornstarch"],
+        "time": 25,
+        "servings": 4,
+        "instructions": "Classic beef and broccoli stir-fry."
+    },
+    {
+        "id": "fallback_361",
+        "title": "Coconut Shrimp Curry",
+        "cuisine": "Thai",
+        "category": ["Seafood", "Gluten-free", "Curry"],
+        "ingredients": ["shrimp", "coconut milk", "curry paste", "vegetables", "lime", "basil"],
+        "time": 25,
+        "servings": 4,
+        "instructions": "Thai coconut shrimp curry."
+    },
+    {
+        "id": "fallback_362",
+        "title": "Grilled Fish Tacos",
+        "cuisine": "Mexican",
+        "category": ["Seafood", "Gluten-free"],
+        "ingredients": ["white fish", "corn tortillas", "cabbage", "lime", "cilantro", "avocado"],
+        "time": 25,
+        "servings": 4,
+        "instructions": "Grilled fish tacos with slaw."
+    },
+    {
+        "id": "fallback_363",
+        "title": "Pork Chops with Apple Sauce",
+        "cuisine": "American",
+        "category": ["Pork", "Gluten-free"],
+        "ingredients": ["pork chops", "apples", "onion", "cinnamon", "chicken broth"],
+        "time": 30,
+        "servings": 4,
+        "instructions": "Pan-seared pork chops with apple sauce."
+    },
+    {
+        "id": "fallback_364",
+        "title": "Korean BBQ Chicken",
+        "cuisine": "Korean",
+        "category": ["Chicken", "Gluten-free", "Grilled"],
+        "ingredients": ["chicken", "gluten-free soy sauce", "honey", "garlic", "ginger", "sesame"],
+        "time": 35,
+        "servings": 4,
+        "instructions": "Sweet and savory Korean BBQ chicken."
+    },
+    {
+        "id": "fallback_365",
+        "title": "Tuna Poke Bowl",
+        "cuisine": "Hawaiian",
+        "category": ["Seafood", "Gluten-free", "Raw"],
+        "ingredients": ["tuna", "rice", "avocado", "cucumber", "soy sauce", "sesame", "seaweed"],
+        "time": 20,
+        "servings": 4,
+        "instructions": "Fresh Hawaiian tuna poke bowl."
+    },
+    {
+        "id": "fallback_366",
+        "title": "Chicken Lettuce Wraps",
+        "cuisine": "Asian",
+        "category": ["Chicken", "Gluten-free", "Low-carb"],
+        "ingredients": ["chicken", "lettuce", "water chestnuts", "soy sauce", "ginger", "garlic"],
+        "time": 20,
+        "servings": 4,
+        "instructions": "Asian-style chicken lettuce wraps."
+    },
+    {
+        "id": "fallback_367",
+        "title": "Mango Chicken Curry",
+        "cuisine": "Indian",
+        "category": ["Chicken", "Gluten-free", "Curry"],
+        "ingredients": ["chicken", "mango", "coconut milk", "curry spices", "onion", "garlic"],
+        "time": 35,
+        "servings": 4,
+        "instructions": "Sweet and savory mango chicken curry."
+    },
+    {
+        "id": "fallback_368",
+        "title": "Cilantro Lime Chicken",
+        "cuisine": "Mexican",
+        "category": ["Chicken", "Gluten-free", "Grilled"],
+        "ingredients": ["chicken", "cilantro", "lime", "garlic", "olive oil", "cumin"],
+        "time": 30,
+        "servings": 4,
+        "instructions": "Marinated cilantro lime chicken."
+    },
+    {
+        "id": "fallback_369",
+        "title": "Beef Fajita Bowl",
+        "cuisine": "Mexican",
+        "category": ["Beef", "Gluten-free", "Rice bowl"],
+        "ingredients": ["beef", "bell peppers", "onion", "rice", "lime", "cilantro", "spices"],
+        "time": 30,
+        "servings": 4,
+        "instructions": "Beef fajita rice bowl."
+    },
+    {
+        "id": "fallback_370",
+        "title": "Blackened Fish",
+        "cuisine": "Cajun",
+        "category": ["Seafood", "Gluten-free", "Spicy"],
+        "ingredients": ["white fish", "cajun spices", "butter", "lemon", "garlic"],
+        "time": 15,
+        "servings": 4,
+        "instructions": "Spicy blackened fish."
+    },
+    {
+        "id": "fallback_371",
+        "title": "Chicken Zoodle Soup",
+        "cuisine": "American",
+        "category": ["Soup", "Gluten-free", "Low-carb"],
+        "ingredients": ["chicken", "zucchini", "carrot", "celery", "chicken broth", "herbs"],
+        "time": 30,
+        "servings": 6,
+        "instructions": "Low-carb chicken zoodle soup."
+    },
+    {
+        "id": "fallback_372",
+        "title": "Shrimp and Grits",
+        "cuisine": "Southern",
+        "category": ["Seafood", "Gluten-free"],
+        "ingredients": ["shrimp", "grits", "bacon", "cheddar", "garlic", "butter"],
+        "time": 35,
+        "servings": 4,
+        "instructions": "Southern shrimp and grits."
+    },
+    {
+        "id": "fallback_373",
+        "title": "Turkey Meatballs",
+        "cuisine": "Italian",
+        "category": ["Turkey", "Gluten-free"],
+        "ingredients": ["ground turkey", "egg", "parmesan", "herbs", "garlic", "almond flour"],
+        "time": 30,
+        "servings": 4,
+        "instructions": "Healthy turkey meatballs."
+    },
+    {
+        "id": "fallback_374",
+        "title": "Coconut Curry Vegetables",
+        "cuisine": "Thai",
+        "category": ["Vegetarian", "Gluten-free", "Curry"],
+        "ingredients": ["mixed vegetables", "coconut milk", "curry paste", "basil", "lime"],
+        "time": 25,
+        "servings": 4,
+        "instructions": "Thai coconut curry vegetables."
+    },
+    {
+        "id": "fallback_375",
+        "title": "Grilled Lamb Chops",
+        "cuisine": "Mediterranean",
+        "category": ["Lamb", "Gluten-free", "Grilled"],
+        "ingredients": ["lamb chops", "rosemary", "garlic", "lemon", "olive oil"],
+        "time": 25,
+        "servings": 4,
+        "instructions": "Herb-grilled lamb chops."
+    },
+    {
+        "id": "fallback_376",
+        "title": "Chicken Adobo",
+        "cuisine": "Filipino",
+        "category": ["Chicken", "Gluten-free"],
+        "ingredients": ["chicken", "soy sauce", "vinegar", "garlic", "bay leaf", "peppercorn"],
+        "time": 45,
+        "servings": 4,
+        "instructions": "Filipino chicken adobo."
+    },
+    {
+        "id": "fallback_377",
+        "title": "Stuffed Zucchini Boats",
+        "cuisine": "Italian",
+        "category": ["Vegetarian", "Gluten-free", "Baked"],
+        "ingredients": ["zucchini", "quinoa", "tomato", "mozzarella", "herbs", "garlic"],
+        "time": 40,
+        "servings": 4,
+        "instructions": "Baked stuffed zucchini boats."
+    },
+    {
+        "id": "fallback_378",
+        "title": "Sesame Ginger Salmon",
+        "cuisine": "Asian",
+        "category": ["Seafood", "Gluten-free"],
+        "ingredients": ["salmon", "sesame oil", "ginger", "garlic", "soy sauce", "honey"],
+        "time": 20,
+        "servings": 4,
+        "instructions": "Asian-glazed sesame salmon."
+    },
+    {
+        "id": "fallback_379",
+        "title": "Beef Kebabs",
+        "cuisine": "Middle Eastern",
+        "category": ["Beef", "Gluten-free", "Grilled"],
+        "ingredients": ["beef", "bell pepper", "onion", "spices", "olive oil", "lemon"],
+        "time": 30,
+        "servings": 4,
+        "instructions": "Grilled beef kebabs."
+    },
+    {
+        "id": "fallback_380",
+        "title": "Chicken Shawarma Bowl",
+        "cuisine": "Middle Eastern",
+        "category": ["Chicken", "Gluten-free"],
+        "ingredients": ["chicken", "rice", "cucumber", "tomato", "tahini", "shawarma spices"],
+        "time": 35,
+        "servings": 4,
+        "instructions": "Middle Eastern shawarma bowl."
+    },
+    {
+        "id": "fallback_381",
+        "title": "Roasted Vegetable Medley",
+        "cuisine": "Mediterranean",
+        "category": ["Vegetarian", "Gluten-free", "Side dish"],
+        "ingredients": ["bell peppers", "zucchini", "eggplant", "tomato", "olive oil", "herbs"],
+        "time": 35,
+        "servings": 6,
+        "instructions": "Mediterranean roasted vegetables."
+    },
+    {
+        "id": "fallback_382",
+        "title": "Chicken Tandoori",
+        "cuisine": "Indian",
+        "category": ["Chicken", "Gluten-free", "Grilled"],
+        "ingredients": ["chicken", "yogurt", "tandoori spices", "lemon", "garlic", "ginger"],
+        "time": 40,
+        "servings": 4,
+        "instructions": "Indian tandoori chicken."
+    },
+    {
+        "id": "fallback_383",
+        "title": "Miso Glazed Cod",
+        "cuisine": "Japanese",
+        "category": ["Seafood", "Gluten-free"],
+        "ingredients": ["cod", "miso", "mirin", "sake", "sugar", "ginger"],
+        "time": 30,
+        "servings": 4,
+        "instructions": "Japanese miso glazed cod."
+    },
+    {
+        "id": "fallback_384",
+        "title": "Beef Taco Bowl",
+        "cuisine": "Mexican",
+        "category": ["Beef", "Gluten-free"],
+        "ingredients": ["ground beef", "rice", "lettuce", "tomato", "cheese", "salsa", "taco spices"],
+        "time": 25,
+        "servings": 4,
+        "instructions": "Beef taco rice bowl."
+    },
+    {
+        "id": "fallback_385",
+        "title": "Lemon Herb Tilapia",
+        "cuisine": "American",
+        "category": ["Seafood", "Gluten-free", "Quick"],
+        "ingredients": ["tilapia", "lemon", "herbs", "garlic", "butter", "white wine"],
+        "time": 15,
+        "servings": 4,
+        "instructions": "Quick lemon herb tilapia."
+    },
+    
+    # Additional Vegetarian Recipes (to reach 50)
+    {
+        "id": "fallback_386",
+        "title": "Vegetarian Pad See Ew",
+        "cuisine": "Thai",
+        "category": ["Vegetarian", "Gluten-free"],
+        "ingredients": ["rice noodles", "tofu", "chinese broccoli", "soy sauce", "garlic", "eggs"],
+        "time": 20,
+        "servings": 4,
+        "instructions": "Thai stir-fried noodles."
+    },
+    {
+        "id": "fallback_387",
+        "title": "Vegetarian Enchiladas",
+        "cuisine": "Mexican",
+        "category": ["Vegetarian", "Gluten-free", "Baked"],
+        "ingredients": ["corn tortillas", "black beans", "cheese", "enchilada sauce", "onion", "bell pepper"],
+        "time": 40,
+        "servings": 4,
+        "instructions": "Cheesy vegetarian enchiladas."
+    },
+    {
+        "id": "fallback_388",
+        "title": "Vegetarian Bibimbap",
+        "cuisine": "Korean",
+        "category": ["Vegetarian", "Gluten-free"],
+        "ingredients": ["rice", "vegetables", "egg", "gochujang", "sesame oil", "garlic"],
+        "time": 30,
+        "servings": 4,
+        "instructions": "Korean mixed rice bowl."
+    },
+    {
+        "id": "fallback_389",
+        "title": "Vegetarian Paella",
+        "cuisine": "Spanish",
+        "category": ["Vegetarian", "Gluten-free", "Rice"],
+        "ingredients": ["rice", "vegetables", "saffron", "vegetable broth", "tomato", "peas"],
+        "time": 45,
+        "servings": 6,
+        "instructions": "Spanish vegetarian paella."
+    },
+    {
+        "id": "fallback_390",
+        "title": "Vegetarian Fried Rice",
+        "cuisine": "Chinese",
+        "category": ["Vegetarian", "Gluten-free", "Rice"],
+        "ingredients": ["rice", "eggs", "vegetables", "soy sauce", "sesame oil", "ginger"],
+        "time": 15,
+        "servings": 4,
+        "instructions": "Quick vegetable fried rice."
+    },
 ]
 
 
