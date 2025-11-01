@@ -17,8 +17,8 @@ from providers.fallback_recipes import FALLBACK_RECIPES
 class ModernRecipeFinderGUI:
     """Modern, aesthetic GUI application for Recipe Finder"""
     
-    # Modern color palette
-    COLORS = {
+    # Light mode color palette
+    COLORS_LIGHT = {
         'primary': '#6366f1',      # Indigo
         'primary_dark': '#4f46e5',
         'primary_light': '#818cf8',
@@ -37,6 +37,29 @@ class ModernRecipeFinderGUI:
         'shadow': '#00000008'
     }
     
+    # Dark mode color palette
+    COLORS_DARK = {
+        'primary': '#818cf8',      # Lighter indigo for dark mode
+        'primary_dark': '#6366f1',
+        'primary_light': '#a5b4fc',
+        'secondary': '#f472b6',    # Lighter pink
+        'success': '#34d399',      # Lighter green
+        'warning': '#fbbf24',      # Lighter amber
+        'danger': '#f87171',       # Lighter red
+        'bg_main': '#0f172a',      # Dark slate
+        'bg_card': '#1e293b',      # Darker slate
+        'bg_hover': '#334155',     # Medium slate
+        'text_primary': '#f1f5f9',
+        'text_secondary': '#cbd5e1',
+        'text_muted': '#94a3b8',
+        'border': '#334155',
+        'border_focus': '#818cf8',
+        'shadow': '#00000020'
+    }
+    
+    # Start with light mode
+    COLORS = COLORS_LIGHT.copy()
+    
     # Spacing constants for consistent layout
     SPACING = {
         'main_padding': 10,        # Main window padding
@@ -51,6 +74,9 @@ class ModernRecipeFinderGUI:
         self.root.title("🍳 Recipe Finder - Modern Edition")
         self.root.geometry("1300x900")
         self.root.minsize(1100, 750)
+        
+        # Theme state
+        self.is_dark_mode = False
         
         # Configure window background
         self.root.configure(bg=self.COLORS['bg_main'])
@@ -145,34 +171,43 @@ class ModernRecipeFinderGUI:
             background=[('active', self.COLORS['border'])]
         )
         
-        # Modern Entry
+        # Modern Entry - dynamic colors
+        entry_bg = self.COLORS['bg_card'] if self.is_dark_mode else 'white'
         style.configure(
             'Modern.TEntry',
-            fieldbackground='white',
-            background='white',
+            fieldbackground=entry_bg,
+            background=entry_bg,
             foreground=self.COLORS['text_primary'],
             borderwidth=2,
             relief='flat',
             padding=10
         )
         
-        # Modern Combobox
+        # Modern Combobox - dynamic colors
         style.configure(
             'Modern.TCombobox',
-            fieldbackground='white',
-            background='white',
+            fieldbackground=entry_bg,
+            background=entry_bg,
             foreground=self.COLORS['text_primary'],
             borderwidth=1,
             relief='flat',
-            padding=8
+            padding=8,
+            arrowcolor=self.COLORS['text_primary']
+        )
+        style.map(
+            'Modern.TCombobox',
+            fieldbackground=[('readonly', entry_bg)],
+            selectbackground=[('readonly', entry_bg)],
+            selectforeground=[('readonly', self.COLORS['text_primary'])]
         )
         
-        # Treeview modern style
+        # Treeview modern style - dynamic colors based on theme
+        treeview_bg = self.COLORS['bg_card'] if self.is_dark_mode else 'white'
         style.configure(
             'Modern.Treeview',
-            background='white',
+            background=treeview_bg,
             foreground=self.COLORS['text_primary'],
-            fieldbackground='white',
+            fieldbackground=treeview_bg,
             borderwidth=0,
             relief='flat',
             rowheight=35,
@@ -205,6 +240,132 @@ class ModernRecipeFinderGUI:
             # If centering fails, just use default position
             print(f"Warning: Could not center window: {e}")
     
+    def toggle_theme(self):
+        """Toggle between light and dark mode"""
+        self.is_dark_mode = not self.is_dark_mode
+        
+        # Switch color palette
+        if self.is_dark_mode:
+            self.COLORS = self.COLORS_DARK.copy()
+            self.theme_toggle_btn.config(text="☀️ Light Mode")
+        else:
+            self.COLORS = self.COLORS_LIGHT.copy()
+            self.theme_toggle_btn.config(text="🌙 Dark Mode")
+        
+        # Reapply styles and update all widgets
+        self.setup_modern_styles()
+        self.apply_theme_to_widgets()
+        self.update_treeview_colors()
+    
+    def update_treeview_colors(self):
+        """Update Treeview row colors based on current theme"""
+        if self.is_dark_mode:
+            # Dark mode: use dark backgrounds for rows
+            self.results_tree.tag_configure('oddrow', background=self.COLORS['bg_hover'], 
+                                          foreground=self.COLORS['text_primary'])
+            self.results_tree.tag_configure('evenrow', background=self.COLORS['bg_card'],
+                                          foreground=self.COLORS['text_primary'])
+        else:
+            # Light mode: use light backgrounds for rows
+            self.results_tree.tag_configure('oddrow', background='#f8fafc',
+                                          foreground=self.COLORS['text_primary'])
+            self.results_tree.tag_configure('evenrow', background='white',
+                                          foreground=self.COLORS['text_primary'])
+    
+    def apply_theme_to_widgets(self):
+        """Apply current theme colors to all widgets"""
+        # Update root window
+        self.root.configure(bg=self.COLORS['bg_main'])
+        
+        # Update specific widget backgrounds
+        entry_bg = self.COLORS['bg_card'] if self.is_dark_mode else 'white'
+        
+        # Update search entry
+        if hasattr(self, 'entry_frame'):
+            self.entry_frame.configure(bg=entry_bg, highlightbackground=self.COLORS['border'])
+        if hasattr(self, 'ingredients_entry'):
+            self.ingredients_entry.configure(bg=entry_bg, fg=self.COLORS['text_primary'], 
+                                           insertbackground=self.COLORS['text_primary'])
+        
+        # Update tree frame
+        if hasattr(self, 'tree_frame'):
+            self.tree_frame.configure(bg=entry_bg, highlightbackground=self.COLORS['border'])
+        
+        # Update details text
+        if hasattr(self, 'details_text_frame'):
+            self.details_text_frame.configure(bg=entry_bg, highlightbackground=self.COLORS['border'])
+        if hasattr(self, 'details_text'):
+            self.details_text.configure(bg=entry_bg, fg=self.COLORS['text_primary'],
+                                      insertbackground=self.COLORS['text_primary'])
+        
+        # Update all frames recursively
+        def update_widget(widget):
+            try:
+                widget_type = widget.winfo_class()
+                
+                # Update Frame backgrounds
+                if widget_type == 'Frame':
+                    current_bg = widget.cget('bg')
+                    # Map old colors to new colors
+                    if current_bg in [self.COLORS_LIGHT['bg_main'], self.COLORS_DARK['bg_main']]:
+                        widget.configure(bg=self.COLORS['bg_main'])
+                    elif current_bg in [self.COLORS_LIGHT['bg_card'], self.COLORS_DARK['bg_card']]:
+                        widget.configure(bg=self.COLORS['bg_card'])
+                    elif current_bg in [self.COLORS_LIGHT['bg_hover'], self.COLORS_DARK['bg_hover']]:
+                        widget.configure(bg=self.COLORS['bg_hover'])
+                    elif current_bg in ['white', '#ffffff', '#1e293b']:
+                        widget.configure(bg=self.COLORS['bg_card'] if self.is_dark_mode else 'white')
+                
+                # Update Label colors
+                elif widget_type == 'Label':
+                    current_bg = widget.cget('bg')
+                    if current_bg in [self.COLORS_LIGHT['bg_main'], self.COLORS_DARK['bg_main']]:
+                        widget.configure(bg=self.COLORS['bg_main'], fg=self.COLORS['text_primary'])
+                    elif current_bg in [self.COLORS_LIGHT['bg_card'], self.COLORS_DARK['bg_card']]:
+                        widget.configure(bg=self.COLORS['bg_card'], fg=self.COLORS['text_primary'])
+                    elif current_bg in [self.COLORS_LIGHT['bg_hover'], self.COLORS_DARK['bg_hover']]:
+                        widget.configure(bg=self.COLORS['bg_hover'], fg=self.COLORS['text_secondary'])
+                    elif current_bg in [self.COLORS_LIGHT['primary'], self.COLORS_DARK['primary']]:
+                        widget.configure(bg=self.COLORS['primary'])
+                
+                # Update Button colors
+                elif widget_type == 'Button':
+                    button_text = widget.cget('text')
+                    if '🔍 Search' in button_text:
+                        widget.configure(bg=self.COLORS['primary'], activebackground=self.COLORS['primary_dark'])
+                    elif 'Dark Mode' in button_text or 'Light Mode' in button_text:
+                        widget.configure(bg=self.COLORS['bg_hover'], fg=self.COLORS['text_primary'], 
+                                       activebackground=self.COLORS['border'], activeforeground=self.COLORS['text_primary'])
+                    else:
+                        # Secondary buttons
+                        current_bg = widget.cget('bg')
+                        if current_bg not in [self.COLORS_LIGHT['primary'], self.COLORS_DARK['primary']]:
+                            widget.configure(bg=self.COLORS['bg_hover'], fg=self.COLORS['text_primary'])
+                
+                # Update Entry colors
+                elif widget_type == 'Entry':
+                    entry_bg = self.COLORS['bg_card'] if self.is_dark_mode else 'white'
+                    widget.configure(bg=entry_bg, fg=self.COLORS['text_primary'], 
+                                   insertbackground=self.COLORS['text_primary'])
+                
+                # Update Text widgets
+                elif widget_type == 'Text':
+                    text_bg = self.COLORS['bg_card'] if self.is_dark_mode else 'white'
+                    widget.configure(bg=text_bg, fg=self.COLORS['text_primary'], 
+                                   insertbackground=self.COLORS['text_primary'])
+                
+                # Recursively update children
+                for child in widget.winfo_children():
+                    update_widget(child)
+                    
+            except Exception as e:
+                # Skip widgets that can't be configured
+                pass
+        
+        # Start recursive update from root
+        for child in self.root.winfo_children():
+            update_widget(child)
+    
     def create_widgets(self):
         """Create all modern GUI widgets - PROPERLY BALANCED"""
         
@@ -227,14 +388,14 @@ class ModernRecipeFinderGUI:
         header_frame.grid(row=0, column=0, sticky=(tk.W, tk.E), pady=(0, 8))
         
         # Compact title with icon
-        title = tk.Label(
+        self.title_label = tk.Label(
             header_frame,
             text="🍳 Recipe Finder",
             font=('Segoe UI', 16, 'bold'),
             fg=self.COLORS['text_primary'],
             bg=self.COLORS['bg_main']
         )
-        title.pack(side=tk.LEFT)
+        self.title_label.pack(side=tk.LEFT)
         
         # Recipe count badge (compact) - dynamically counted
         total_recipes = len(FALLBACK_RECIPES)
@@ -248,6 +409,24 @@ class ModernRecipeFinderGUI:
             pady=3
         )
         self.recipe_count_label.pack(side=tk.RIGHT)
+        
+        # Dark mode toggle button
+        self.theme_toggle_btn = tk.Button(
+            header_frame,
+            text="🌙 Dark Mode",
+            font=('Segoe UI', 9),
+            bg=self.COLORS['bg_hover'],
+            fg=self.COLORS['text_primary'],
+            activebackground=self.COLORS['border'],
+            activeforeground=self.COLORS['text_primary'],
+            relief='flat',
+            bd=0,
+            cursor='hand2',
+            command=self.toggle_theme,
+            padx=12,
+            pady=6
+        )
+        self.theme_toggle_btn.pack(side=tk.RIGHT, padx=(0, 10))
         
         # Compact search section
         self.create_modern_search_section(main_frame)
@@ -289,17 +468,19 @@ class ModernRecipeFinderGUI:
         ).grid(row=0, column=0, sticky=tk.W, padx=(0, 10))
         
         # Compact search input on same row
-        entry_frame = tk.Frame(search_frame, bg='white', highlightthickness=1, 
+        entry_bg = self.COLORS['bg_card'] if self.is_dark_mode else 'white'
+        self.entry_frame = tk.Frame(search_frame, bg=entry_bg, highlightthickness=1, 
                               highlightbackground=self.COLORS['border'])
-        entry_frame.grid(row=0, column=1, sticky=(tk.W, tk.E), padx=(0, 8))
+        self.entry_frame.grid(row=0, column=1, sticky=(tk.W, tk.E), padx=(0, 8))
         
         self.ingredients_entry = tk.Entry(
-            entry_frame,
+            self.entry_frame,
             font=('Segoe UI', 10),
             fg=self.COLORS['text_primary'],
-            bg='white',
+            bg=entry_bg,
             relief='flat',
-            bd=0
+            bd=0,
+            insertbackground=self.COLORS['text_primary']
         )
         self.ingredients_entry.pack(fill=tk.BOTH, padx=10, pady=6)
         self.ingredients_entry.insert(0, "chicken, tomato, onion, garlic")
@@ -327,9 +508,9 @@ class ModernRecipeFinderGUI:
         
         # Focus effect for entry
         def on_entry_focus_in(e):
-            entry_frame.configure(highlightbackground=self.COLORS['border_focus'])
+            self.entry_frame.configure(highlightbackground=self.COLORS['border_focus'])
         def on_entry_focus_out(e):
-            entry_frame.configure(highlightbackground=self.COLORS['border'])
+            self.entry_frame.configure(highlightbackground=self.COLORS['border'])
         
         self.ingredients_entry.bind('<FocusIn>', on_entry_focus_in)
         self.ingredients_entry.bind('<FocusOut>', on_entry_focus_out)
@@ -420,15 +601,16 @@ class ModernRecipeFinderGUI:
         header.grid(row=0, column=0, sticky=tk.W, pady=(0, 6))
         
         # Create modern Treeview for results
-        tree_frame = tk.Frame(results_frame, bg='white', highlightthickness=1,
+        tree_bg = self.COLORS['bg_card'] if self.is_dark_mode else 'white'
+        self.tree_frame = tk.Frame(results_frame, bg=tree_bg, highlightthickness=1,
                              highlightbackground=self.COLORS['border'])
-        tree_frame.grid(row=1, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
-        tree_frame.columnconfigure(0, weight=1)
-        tree_frame.rowconfigure(0, weight=1)
+        self.tree_frame.grid(row=1, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
+        self.tree_frame.columnconfigure(0, weight=1)
+        self.tree_frame.rowconfigure(0, weight=1)
         
         columns = ("match", "have", "need", "time", "provider")
         self.results_tree = ttk.Treeview(
-            tree_frame,
+            self.tree_frame,
             columns=columns,
             show="tree headings",
             selectmode="browse",
@@ -451,7 +633,7 @@ class ModernRecipeFinderGUI:
         self.results_tree.column("provider", width=120)
         
         # Modern scrollbar
-        scrollbar = ttk.Scrollbar(tree_frame, orient=tk.VERTICAL, command=self.results_tree.yview)
+        scrollbar = ttk.Scrollbar(self.tree_frame, orient=tk.VERTICAL, command=self.results_tree.yview)
         self.results_tree.configure(yscrollcommand=scrollbar.set)
         
         # Grid layout
@@ -461,15 +643,15 @@ class ModernRecipeFinderGUI:
         # Bind selection event
         self.results_tree.bind('<<TreeviewSelect>>', self.on_recipe_select)
         
-        # Add alternating row colors
-        self.results_tree.tag_configure('oddrow', background='#f8fafc')
-        self.results_tree.tag_configure('evenrow', background='white')
+        # Add alternating row colors (dynamic based on theme)
+        self.update_treeview_colors()
     
     def create_compact_details_and_actions(self, parent):
-        """Create combined details and action buttons - DYNAMIC display"""
-        # Card frame that expands vertically
-        self.details_card = tk.Frame(parent, bg=self.COLORS['bg_card'], relief='flat', bd=0)
-        self.details_card.grid(row=4, column=0, sticky=(tk.W, tk.E, tk.N, tk.S), pady=(0, 8))
+        """Create combined details and action buttons - Fixed height at bottom"""
+        # Card frame with FIXED height to prevent results from jumping
+        self.details_card = tk.Frame(parent, bg=self.COLORS['bg_card'], relief='flat', bd=0, height=250)
+        self.details_card.grid(row=4, column=0, sticky=(tk.W, tk.E), pady=(0, 8))
+        self.details_card.grid_propagate(False)  # Prevent frame from shrinking to fit content
         self._add_card_shadow(self.details_card)
         # Initially hide the details section
         self.details_card.grid_remove()
@@ -493,21 +675,24 @@ class ModernRecipeFinderGUI:
         ).pack(anchor=tk.W, pady=(0, 8))
         
         # Details text with border for visibility
-        text_frame = tk.Frame(details_container, bg='white', 
+        text_bg = self.COLORS['bg_card'] if self.is_dark_mode else 'white'
+        self.details_text_frame = tk.Frame(details_container, bg=text_bg, 
                              highlightthickness=1, highlightbackground=self.COLORS['border'])
-        text_frame.pack(fill=tk.BOTH, expand=True)
+        self.details_text_frame.pack(fill=tk.BOTH, expand=True)
         
         # Scrolled text that will expand to fill available space
+        text_bg = self.COLORS['bg_card'] if self.is_dark_mode else 'white'
         self.details_text = scrolledtext.ScrolledText(
-            text_frame,
+            self.details_text_frame,
             wrap=tk.WORD,
             font=('Segoe UI', 9),
-            bg='white',
+            bg=text_bg,
             fg=self.COLORS['text_primary'],
             relief='flat',
             bd=0,
             padx=12,
-            pady=10
+            pady=10,
+            insertbackground=self.COLORS['text_primary']
         )
         self.details_text.pack(fill=tk.BOTH, expand=True)
         self.details_text.insert(1.0, "Select a recipe from the results above to view detailed information...\n\nIngredients, instructions, cooking time, and more will appear here.")
@@ -702,7 +887,7 @@ class ModernRecipeFinderGUI:
             )
     
     def on_recipe_select(self, event):
-        """Handle recipe selection - SHOW details section and scroll to keep item visible"""
+        """Handle recipe selection - Show fixed-height details panel at bottom"""
         selection = self.results_tree.selection()
         if not selection:
             # No selection - hide details section
@@ -715,14 +900,12 @@ class ModernRecipeFinderGUI:
         
         if 0 <= index < len(self.last_results):
             self.selected_recipe = self.last_results[index]
-            self.show_details_section()  # Show details section (50/50 split)
+            self.show_details_section()  # Show details section with fixed height
             self.display_recipe_details(self.selected_recipe)
             self.view_btn.config(state='normal' if self.selected_recipe.source_url else 'disabled')
             
-            # Scroll selected item to top to prevent overlap with details section
+            # Ensure selected item is visible (simple scroll)
             self.results_tree.see(item)
-            # Additional scroll adjustment: try to position it near the top
-            self._scroll_selected_to_top(item)
     
     def display_recipe_details(self, recipe: Recipe):
         """Display detailed information for a recipe"""
@@ -777,20 +960,15 @@ class ModernRecipeFinderGUI:
     
     def show_details_section(self):
         """
-        Show the details section and reconfigure layout to 50/50 split.
+        Show the details section with fixed height at bottom.
         
         When a recipe is selected, this method:
         - Makes the hidden details card visible
-        - Adjusts grid weights so results and details each take 50% of space
-        - Forces a layout refresh for immediate visual update
+        - Uses fixed height for details section to prevent results from jumping
+        - Results section maintains its size and scroll position
         """
         if not self.details_visible:
-            # Get the main frame (parent of details_card)
-            main_frame = self.details_card.master
-            # Reconfigure weights for 50/50 split
-            main_frame.rowconfigure(3, weight=1)  # Results - 50%
-            main_frame.rowconfigure(4, weight=1)  # Details - 50%
-            # Show the details section
+            # Show the details section (weight stays at 0 for fixed height)
             self.details_card.grid()
             self.details_visible = True
             # Force layout update
